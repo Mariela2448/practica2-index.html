@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Días de la Semana</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        button{
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        #resultado{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Días de la Semana</h1>
+
+    <button onclick="mostrarDias()">
+        Mostrar días
+    </button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarDias() {
+            const dias = [
+                "Lunes",
+                "Martes",
+                "Miércoles",
+                "Jueves",
+                "Viernes",
+                "Sábado",
+                "Domingo"
+            ];
+
+            let texto = "<ul style='list-style:none; padding:0;'>";
+
+            for(let i = 0; i < dias.length; i++){
+                texto += "<li>" + dias[i] + "</li>";
+            }
+
+            texto += "</ul>";
+
+            document.getElementById("resultado").innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>
